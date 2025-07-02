@@ -1,0 +1,13 @@
+# This project was developed in Google Colab.
+# Library installation is handled inside the notebook (see the setup section),
+# but for clarity and reproducibility, this file lists the main packages used.
+
+torch>=1.13.0
+opencv-python
+tqdm
+numpy
+matplotlib
+albumentations==2.0.8
+segmentation-models-pytorch @ git+https://github.com/qubvel-org/segmentation_models.pytorch
+pytorch-lightning==2.5.2
+scipy

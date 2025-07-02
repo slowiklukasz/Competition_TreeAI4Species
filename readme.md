@@ -1,19 +1,19 @@
-## TreeAI4Species Competition: Semantic Segmentation Solution
+## TreeAI4Species: My Solution for Semantic Segmentation Challenge (https://www.codabench.org/competitions/9168/#/pages-tab)
 
 ### Author: Łukasz Słowik (lukslow)
 
 #### Method Overview
 
-This solution achieves high-performance semantic segmentation through a 4-model weighted ensemble. The approach combines different architectures and backbones to maximize predictive accuracy and robustness.
+This solution uses a 4-model weighted ensemble for semantic segmentation. Different architectures and backbones are combined to improve prediction accuracy and robustness.
 
-The final inference pipeline integrates predictions from all four models and enhances them with Test-Time Augmentation (TTA) and a confidence threshold to improve precision.
+During inference, predictions from all models are aggregated and refined using Test-Time Augmentation (TTA) and a confidence threshold to increase precision.
 
 #### 1. Model Ensemble Composition:
 
 - Model A DeepLabV3 + efficientnet-b5 encoder, trained with DiceLoss and CrossEntropyLoss with light augmentations.
 - Model B DeepLabV3 + efficientnet-b5 encoder, trained with with DiceLoss and CrossEntropyLoss with strong augmentations.
 - Model C Unet++ + efficientnet-b5 encoder, trained with Dice+Focal loss.
-- Model D DeepLabV3+ mit_b4 (Transformer) encoder. Best-performing single model, leveraging a Transformer backbone.
+- Model D DeepLabV3 + mit_b4 (Transformer) encoder. Best-performing single model, leveraging a Transformer backbone.
 
 #### 2. How to Reproduce Predictions
 
